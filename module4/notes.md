@@ -1,0 +1,1 @@
+I learned how to clone a repo using git in the command line. With it, I was able to make commits and branches. Version control with git is a way to ensure my code will be safely backed up with historical versions.
