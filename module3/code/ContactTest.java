@@ -29,4 +29,14 @@ public class ContactTest {
         assertTrue(contact.toString().contains("Zelda Hyrule"));
         assertTrue(contact.toString().contains("+1 374 432 2222"));
     }
+
+    @Test
+    void toString_twoSameNameIndependence() {
+        Contact fakeLink = new Contact("Link", "999-656-0000");
+        Contact realLink = new Contact("Link", "484-267-6100");
+
+        fakeLink.setName("Ganondorf");
+
+        assertEquals("Link", realLink.getName());
+    }
 } 
