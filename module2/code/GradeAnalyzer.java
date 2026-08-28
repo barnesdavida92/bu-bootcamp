@@ -102,4 +102,46 @@ public class GradeAnalyzer {
             System.out.println("Could not write file: " + e.getMessage());
         }
     }
+
+    public static String getLetterGrade(int score) { 
+        if (score < 60) {
+            return "F";
+        }
+        else if (score <= 62) {
+            return "D-";
+        }
+        else if (score < 68) {
+            return "D";
+        }
+        else if (score < 70) {
+            return "D+";
+        }
+        else if (score <= 72) {
+            return "C-";
+        }
+        else if (score < 78) {
+            return "C";
+        }
+        else if (score < 80) {
+            return "C+";
+        }
+        else if (score <= 82) {
+            return "B-";
+        }
+        else if (score < 88) {
+            return "B";
+        }
+        else if (score < 90) {
+            return "B+";
+        }
+        else if (score <= 92) {
+            return "A-";
+        }
+        else if (score < 98) {
+            return "A";
+        }
+        else {
+            return "A+";
+        }
+    }
 }

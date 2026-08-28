@@ -41,4 +41,54 @@ public class GradeAnalyzerTest {
         ArrayList<Integer> scores = new ArrayList<>(Arrays.asList(90, -10, 70, 10));
         assertEquals(40.0, GradeAnalyzer.calculateAverage(scores));
     }
+
+    @Test 
+    void getLetterGrade_whenNegative() { 
+        assertEquals("F", GradeAnalyzer.getLetterGrade(-10));
+    }
+
+    @Test 
+    void getLetterGrade_whenZero() { 
+        assertEquals("F", GradeAnalyzer.getLetterGrade(0));
+    }
+
+    @Test 
+    void getLetterGrade_whenEightyNine() { 
+        assertEquals("B+", GradeAnalyzer.getLetterGrade(89));
+    }
+
+    @Test 
+    void getLetterGrade_whenNinety() { 
+        assertEquals("A-", GradeAnalyzer.getLetterGrade(90));
+    }
+
+    @Test 
+    void getLetterGrade_whenSeventyNine() { 
+        assertEquals("C+", GradeAnalyzer.getLetterGrade(79));
+    }
+
+    @Test 
+    void getLetterGrade_whenEighty() { 
+        assertEquals("B-", GradeAnalyzer.getLetterGrade(80));
+    }
+
+    @Test 
+    void getLetterGrade_whenSixtyNine() { 
+        assertEquals("D+", GradeAnalyzer.getLetterGrade(69));
+    }
+
+    @Test 
+    void getLetterGrade_whenSeventy() { 
+        assertEquals("C-", GradeAnalyzer.getLetterGrade(70));
+    }
+
+    @Test 
+    void getLetterGrade_whenFiftyNine() { 
+        assertEquals("F", GradeAnalyzer.getLetterGrade(59));
+    }
+
+    @Test 
+    void getLetterGrade_whenSixty() { 
+        assertEquals("D-", GradeAnalyzer.getLetterGrade(60));
+    }
 }
